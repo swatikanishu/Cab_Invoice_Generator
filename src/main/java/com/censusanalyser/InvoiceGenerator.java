@@ -26,5 +26,12 @@ public class InvoiceGenerator {
             totalFare += this.getFare(ride.getDistance(), ride.getTime());
         return totalFare;
     }
+    public InvoiceBill getInvoiceBill() {
+        int totalRides = rides.size();
+        double totalFare = this.totalFare();
+        int avgRide = (int) totalFare / totalRides;
+        return new InvoiceBill(totalRides, totalFare, avgRide);
+    }
 }
+
 
