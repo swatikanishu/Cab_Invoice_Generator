@@ -1,7 +1,10 @@
 package com.invoicegenerator;
-import com.censusanalyser.InvoiceGenerator;
+import com.cabinvoicegenerator.InvoiceGenerator;
+import com.cabinvoicegenerator.Ride;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import java.util.Arrays;
 
 public class InvoiceGeneratorTest {
     @Test

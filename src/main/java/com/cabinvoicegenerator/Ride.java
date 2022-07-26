@@ -1,4 +1,4 @@
-package com.censusanalyser;
+package com.cabinvoicegenerator;
 
 public class Ride {
     double distance;

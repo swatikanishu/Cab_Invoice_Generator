@@ -1,6 +1,9 @@
-package com.censusanalyser;
+package com.cabinvoicegenerator;
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
+
 public class InvoiceGenerator {
     private final int COST_PER_KM = 10;
     private final int COST_PER_MIN = 1;
@@ -33,5 +36,3 @@ public class InvoiceGenerator {
         return new InvoiceBill(totalRides, totalFare, avgRide);
     }
 }
-
-
