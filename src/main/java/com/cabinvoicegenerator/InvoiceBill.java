@@ -3,15 +3,22 @@ package com.cabinvoicegenerator;
 //      This class is used to hold data of multiple rides
 public class InvoiceBill {
 
-    int totalRides;
-    double totalFare;
-    int avgRide;
+        private final int noOfRides;
+        private final double totalFare;
+        private final double avgFare;
+
+        /**
+         * parameterized constructor to bind the values for noOfRides, totalFare and avgFare
+         *
+         * @param noOfRides
+         * @param totalFare
+         */
 
     //      parameterized constructor to bind the values for noOfRides, totalFare and avgFare
-    public InvoiceBill(int totalRides, double totalFare, int avgRide) {
-        this.totalRides = totalRides;
+    public InvoiceBill(int totalRides, double totalFare) {
+        this.noOfRides= totalRides;
         this.totalFare = totalFare;
-        this.avgRide = avgRide;
+        this.avgFare = this.totalFare/this.noOfRides;
     }
 
     @Override
@@ -19,7 +26,7 @@ public class InvoiceBill {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         InvoiceBill that = (InvoiceBill) o;
-        return totalRides == that.totalRides && Double.compare(that.totalFare, totalFare) == 0 && avgRide == that.avgRide;
+        return noOfRides == that.noOfRides && Double.compare(that.totalFare, totalFare) == 0 && avgFare == that.avgFare;
     }
 }
 

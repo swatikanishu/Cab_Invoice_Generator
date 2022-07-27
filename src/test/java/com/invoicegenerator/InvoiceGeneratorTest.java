@@ -1,4 +1,5 @@
 package com.invoicegenerator;
+import com.cabinvoicegenerator.InvoiceBill;
 import com.cabinvoicegenerator.InvoiceGenerator;
 import com.cabinvoicegenerator.Ride;
 import org.junit.jupiter.api.Assertions;
@@ -30,5 +31,14 @@ public class InvoiceGeneratorTest {
         Assertions.assertEquals(185, totalFare, 0.0);
     }
 
-
+    @Test
+    public void givenMultipleRides_ShouldReturnInvoiceBill() {
+        Ride[] rides = {
+                new Ride(2.0, 5),
+                new Ride(0.1, 1)
+        };
+        InvoiceBill invoiceBill = InvoiceGenerator.getFare(rides);
+        InvoiceBill expectedInvoiceSummary = new InvoiceBill(2, 30.0);
+        Assertions.assertEquals(invoiceBill, expectedInvoiceSummary);
+    }
 }

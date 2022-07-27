@@ -1,8 +1,10 @@
 package com.cabinvoicegenerator;
 
 public class Ride {
+    double totalFare;
     double distance;
     int time;
+
 
     public Ride(double distance, int time) {
         this.distance = distance;
