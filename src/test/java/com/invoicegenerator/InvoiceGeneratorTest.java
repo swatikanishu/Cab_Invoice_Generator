@@ -8,14 +8,16 @@ public class InvoiceGeneratorTest {
     public void givenDistanceAndTime_ShouldReturnTotalFare() {
         InvoiceGenerator invoiceGenerator = new InvoiceGenerator();
         double fare = invoiceGenerator.getFare(4, 15);
-        Assertions.assertEquals(55, fare, 0.0);
+        System.out.println(fare);
+        Assertions.assertEquals(55, fare);
     }
 
     @Test
     public void givenDistanceAndTime_WhenTotalFareLessThan10_ShouldReturnMinFare() {
         InvoiceGenerator invoiceGenerator = new InvoiceGenerator();
         double fare = invoiceGenerator.getFare(0.100, 1);
-        Assertions.assertEquals(5, fare, 0.0);
+        System.out.println(fare);
+        Assertions.assertEquals(5, fare);
     }
 
     @Test
@@ -24,7 +26,8 @@ public class InvoiceGeneratorTest {
         inVoiceGenerator.addRide(4, 15);
         inVoiceGenerator.addRide(10, 30);
         double totalFare = inVoiceGenerator.totalFare();
-        Assertions.assertEquals(185, totalFare, 0.0);
+        System.out.println(totalFare);
+        Assertions.assertEquals(185, totalFare);
     }
 
 
